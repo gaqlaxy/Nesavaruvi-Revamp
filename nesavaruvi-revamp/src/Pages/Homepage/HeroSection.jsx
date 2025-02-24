@@ -17,16 +17,18 @@ export default function HeroSection() {
   };
   return (
     <>
-      <section className="relative h-screen w-full grid grid-cols-2 overflow-hidden p-6 gap-6 ml-16">
-        <div>
+      <section className="relative h-screen w-full grid grid-cols-2 overflow-hidden p-6 gap-6 ">
+        <div className="ml-12">
           <h1 className="text-5xl font-bold mb-4 pt-20">
             Wrap Yourself <br /> in Timeless Tradition
           </h1>
+          
           <p className="mb-4 text-sm">
             Discover the Legacy Woven in Every Thread
           </p>
           <div className="flex space-x-4 items-center">
           <a>Explore</a>
+        
           {/* Conditionally render "Play Video" if not playing */}
           {!isPlaying && (
             <a

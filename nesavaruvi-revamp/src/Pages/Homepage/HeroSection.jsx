@@ -17,7 +17,7 @@ export default function HeroSection() {
   };
   return (
     <>
-      <section className="relative h-screen w-full grid grid-cols-2 overflow-hidden p-6 gap-6  ">
+      <section className="relative h-screen w-full grid grid-cols-2 overflow-hidden p-6  ">
         <div className="p-20">
           <h1 className="text-5xl font-bold mb-4 pt-20">
             Wrap Yourself <br /> in Timeless Tradition
@@ -27,7 +27,12 @@ export default function HeroSection() {
             Discover the Legacy Woven in Every Thread
           </p>
           <div className="flex space-x-4 items-center">
-            <a>Explore</a>
+          <a
+          href=""
+          className="bg-[#f79441] text-white px-4 py-2 font-semibold rounded-lg hover:bg-[#de853b] transition-colors"
+        >
+          Explore
+        </a>
 
             {/* Conditionally render "Play Video" if not playing */}
             {!isPlaying && (

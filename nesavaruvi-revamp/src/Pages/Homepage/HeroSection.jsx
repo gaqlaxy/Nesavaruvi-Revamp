@@ -17,44 +17,44 @@ export default function HeroSection() {
   };
   return (
     <>
-      <section className="relative h-screen w-full grid grid-cols-2 overflow-hidden p-6 gap-6 ">
-        <div className="ml-12">
+      <section className="relative h-screen w-full grid grid-cols-2 overflow-hidden p-6 gap-6  ">
+        <div className="p-20">
           <h1 className="text-5xl font-bold mb-4 pt-20">
             Wrap Yourself <br /> in Timeless Tradition
           </h1>
-          
+
           <p className="mb-4 text-sm">
             Discover the Legacy Woven in Every Thread
           </p>
           <div className="flex space-x-4 items-center">
-          <a>Explore</a>
-        
-          {/* Conditionally render "Play Video" if not playing */}
-          {!isPlaying && (
-            <a
-              onClick={handleToggleVideo}
-              className=" text-black px-6 py-3 rounded-md flex gap-1 items-center cursor-pointer"
-            >
-              <FaRegPlayCircle />
-              Play
-            </a>
-          )}
-          {isPlaying && (
-            <a
-              onClick={handleToggleVideo}
-              className="text-black px-6 py-3 rounded-md flex gap-1 items-center cursor-pointer"
-            >
-              <FaRegCirclePause />
-              Pause
-            </a>
-          )}
+            <a>Explore</a>
+
+            {/* Conditionally render "Play Video" if not playing */}
+            {!isPlaying && (
+              <a
+                onClick={handleToggleVideo}
+                className=" text-black px-6 py-3 rounded-md flex gap-1 items-center cursor-pointer"
+              >
+                <FaRegPlayCircle />
+                Play
+              </a>
+            )}
+            {isPlaying && (
+              <a
+                onClick={handleToggleVideo}
+                className="text-black px-6 py-3 rounded-md flex gap-1 items-center cursor-pointer"
+              >
+                <FaRegCirclePause />
+                Pause
+              </a>
+            )}
           </div>
         </div>
 
-        <div className="overflow-hidden">
+        <div className="overflow-hidden p-20">
           <video
             ref={videoRef}
-            className=" w-[60%] h-[80%] rounded-lg object-cover overflow-hidden"
+            className=" w-full h-[80%] rounded-lg object-cover overflow-hidden"
             loop
             muted
             playsInline

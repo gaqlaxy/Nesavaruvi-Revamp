@@ -7,4 +7,22 @@
   body {
     font-family: "Sen", serif;
   }
+  :root {
+    --brand-primary: #f79441;
+    --brand-secondary: #2d2d2d;
+    --brand-accent: #e8e1d9;
+  }
+  .clip-diagonal {
+    clip-path: polygon(0 0, 100% 0, 70% 100%, 0 100%);
+  }
+
+  .clip-diagonal-mobile {
+    clip-path: polygon(0 0, 100% 0, 100% 40%, 0 100%);
+  }
+
+  @media (min-width: 1024px) {
+    .clip-diagonal {
+      clip-path: none;
+    }
+  }
 }

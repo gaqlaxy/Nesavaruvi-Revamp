@@ -25,4 +25,24 @@
       clip-path: none;
     }
   }
+  /* Custom animations */
+  .category-enter {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  .category-enter-active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.3s ease;
+  }
+
+  /* Mobile menu implementation */
+  @media (max-width: 1024px) {
+    .nav-links {
+      display: none;
+    }
+    .mobile-menu {
+      display: block;
+    }
+  }
 }

@@ -112,70 +112,203 @@
 //   );
 // }
 
+// import React from "react";
+// import { motion } from "framer-motion";
+
+// export default function HeroSection() {
+//   return (
+//     <>
+//       <div className="min-h-screen grid lg:grid-cols-2 bg-cream relative overflow-hidden">
+//         {/* Video Section */}
+//         <motion.video
+//           initial={{ scale: 1.2 }}
+//           animate={{ scale: 1 }}
+//           transition={{ duration: 1.5 }}
+//           className="h-[100vh] w-[120%] object-contain transform -skew-x-12 lg:skew-x-0 origin-right"
+//           style={{
+//             width: "auto",
+//             left: "50%",
+//             transform: "translateX(-50%)",
+//             scale: 1,
+//             objectPosition: "left center",
+//           }}
+//           muted
+//           loop
+//           autoPlay
+//           playsInline
+//         >
+//           <source src="/HeroVideo1.mp4" type="video/mp4" />
+//           <source src="/HeroVideo2.mp4" type="video/mp4" />
+//         </motion.video>
+
+//         {/* Content Section */}
+//         <motion.div
+//           initial={{ opacity: 0, x: -20 }}
+//           animate={{ opacity: 1, x: 0 }}
+//           className="flex flex-col justify-center p-8 lg:p-20 bg-cream"
+//         >
+//           <h2 className="text-4xl lg:text-5xl font-serif mb-4 text-gray-800">
+//             Crafted with <span className="text-[#f79441]">Passion</span>
+//           </h2>
+//           <p className="mb-8 max-w-md text-gray-600 leading-relaxed">
+//             Experience luxury woven into every thread through generations of
+//             traditional craftsmanship
+//           </p>
+
+//           <div className="flex flex-col lg:flex-row gap-4">
+//             <motion.button
+//               whileHover={{ scale: 1.05 }}
+//               className="px-8 py-3 border-2 border-gray-800 hover:bg-gray-800 hover:text-white transition-all"
+//             >
+//               View Lookbook
+//             </motion.button>
+//             <motion.button
+//               whileHover={{ scale: 1.05 }}
+//               className="px-8 py-3 bg-gray-800 text-white hover:bg-[#f79441] transition-all"
+//             >
+//               Shop Now
+//             </motion.button>
+//           </div>
+
+//           {/* Texture Decor */}
+//           <div className="absolute bottom-8 right-8 w-24 h-24 bg-[url('/silk-pattern.png')] opacity-10" />
+//         </motion.div>
+
+//         {/* Mobile Diagonal Line */}
+//         <div className="lg:hidden absolute bottom-0 left-0 right-0 h-12 bg-cream clip-diagonal-mobile" />
+//       </div>
+//     </>
+//   );
+// }
+
+// import React from "react";
+// import { motion } from "framer-motion";
+// import Navbar from "../../Components/Navbar"; // Your navbar component
+
+// export default function HeroSection() {
+//   return (
+//     <>
+//       <nav className="absolute top-0 w-full z-20">
+//         <Navbar />
+//       </nav>
+//       <div className="relative h-screen w-full overflow-hidden">
+//         {/* Full-screen Video Background */}
+//         <motion.video
+//           autoPlay
+//           muted
+//           loop
+//           playsInline
+//           className="absolute inset-0 h-full w-full object-cover z-0"
+//         >
+//           <source src="/HeroVideo1.mp4" type="video/mp4" />
+//           <source src="/HeroVideo2.mp4" type="video/mp4" />
+//         </motion.video>
+
+//         {/* Dark Overlay for better text visibility */}
+//         <div className="absolute inset-0 bg-black/30 z-10" />
+
+//         {/* Navbar */}
+
+//         {/* Hero Content */}
+//         <div className="relative h-full flex items-center justify-center text-center z-20">
+//           <motion.div
+//             initial={{ opacity: 0, y: 20 }}
+//             animate={{ opacity: 1, y: 0 }}
+//             className="text-white max-w-4xl px-4"
+//           >
+//             <h1 className="text-5xl md:text-6xl font-bold mb-6">
+//               Wrap Yourself in Tradition
+//             </h1>
+//             <p className="text-xl md:text-2xl mb-8">
+//               Discover Timeless Craftsmanship Woven Into Every Thread
+//             </p>
+//             <button className="bg-[#f79441] text-white px-8 py-3 rounded-lg hover:bg-[#e68330] transition-colors">
+//               Explore Collection
+//             </button>
+//           </motion.div>
+//         </div>
+//       </div>
+//     </>
+//   );
+// }
+
 import React from "react";
 import { motion } from "framer-motion";
+import Navbar from "../../Components/Navbar";
 
 export default function HeroSection() {
   return (
+    // <section className="relative h-screen w-full overflow-hidden">
+    //   {/* Video Background - Lowest Layer */}
+    //   <motion.video
+    //     autoPlay
+    //     muted
+    //     loop
+    //     playsInline
+    //     className="absolute inset-0 h-full w-full object-cover"
+    //   >
+    //     <source src="/HeroVideo1.mp4" type="video/mp4" />
+    //     <source src="/HeroVideo2.mp4" type="video/mp4" />
+    //   </motion.video>
+
+    //   {/* Dark Overlay - Middle Layer */}
+    //   <div className="absolute inset-0 bg-black/30 z-10" />
+
+    //   {/* Navbar - Top Layer */}
+    //   <div className="relative z-30 w-full">
+    //     {" "}
+    //     {/* Increased z-index */}
+    //     <Navbar />
+    //   </div>
+
+    //   {/* Hero Content - Top Layer */}
+    //   <div className="relative z-20 h-full flex items-center justify-center text-center">
+    //     <motion.div
+    //       initial={{ opacity: 0, y: 20 }}
+    //       animate={{ opacity: 1, y: 0 }}
+    //       transition={{ duration: 0.8 }}
+    //       className="text-white max-w-4xl px-4"
+    //     >
+    //       <h1 className="text-5xl md:text-6xl font-bold mb-6">
+    //         Wrap Yourself in Tradition
+    //       </h1>
+    //       <p className="text-xl md:text-2xl mb-8">
+    //         Discover Timeless Craftsmanship Woven Into Every Thread
+    //       </p>
+    //       {/* <button className="bg-[#f79441] text-white px-8 py-3 rounded-lg hover:bg-[#e68330] transition-colors">
+    //         Explore Collection
+    //       </button> */}
+    //       <button className="bg-[#f79441] text-white px-6 py-2.5 font-semibold rounded-full hover:bg-[#de853b] transition-all duration-300 relative overflow-hidden group">
+    //         <span className="relative z-10">Explore Collection</span>
+    //         <span className="absolute inset-0 bg-black/10 w-0 group-hover:w-full transition-all duration-300" />
+    //       </button>
+    //     </motion.div>
+    //   </div>
+    // </section>
     <>
-      <div className="min-h-screen grid lg:grid-cols-2 bg-cream relative overflow-hidden">
-        {/* Video Section */}
-        <motion.video
-          initial={{ scale: 1.2 }}
-          animate={{ scale: 1 }}
-          transition={{ duration: 1.5 }}
-          className="h-[100vh] w-[120%] object-contain transform -skew-x-12 lg:skew-x-0 origin-right"
-          style={{
-            width: "auto",
-            left: "50%",
-            transform: "translateX(-50%)",
-            scale: 1,
-            objectPosition: "left center",
-          }}
-          muted
-          loop
-          autoPlay
-          playsInline
-        >
-          <source src="/HeroVideo1.mp4" type="video/mp4" />
-          <source src="/HeroVideo2.mp4" type="video/mp4" />
-        </motion.video>
+      {/* Code 4  */}
+      <div className="h-screen grid lg:grid-cols-2">
+        <div className="relative overflow-hidden">
+          <img
+            src="/hero1.jpg"
+            className="w-full h-full object-cover transform hover:scale-105 transition-transform"
+            alt="Fabric texture"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/20" />
+        </div>
 
-        {/* Content Section */}
-        <motion.div
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
-          className="flex flex-col justify-center p-8 lg:p-20 bg-cream"
-        >
-          <h2 className="text-4xl lg:text-5xl font-serif mb-4 text-gray-800">
-            Crafted with <span className="text-[#f79441]">Passion</span>
-          </h2>
-          <p className="mb-8 max-w-md text-gray-600 leading-relaxed">
-            Experience luxury woven into every thread through generations of
-            traditional craftsmanship
-          </p>
-
-          <div className="flex flex-col lg:flex-row gap-4">
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              className="px-8 py-3 border-2 border-gray-800 hover:bg-gray-800 hover:text-white transition-all"
-            >
-              View Lookbook
-            </motion.button>
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              className="px-8 py-3 bg-gray-800 text-white hover:bg-[#f79441] transition-all"
-            >
-              Shop Now
-            </motion.button>
+        <div className="bg-cream flex items-center p-12">
+          <div className="max-w-md">
+            <h2 className="text-4xl font-serif mb-6">Artisan Threads</h2>
+            <p className="mb-8">
+              Discover handcrafted perfection in every stitch
+            </p>
+            <div className="flex gap-4">
+              <button className="underline">View Collection</button>
+              <button className="border px-8 py-3">Book Appointment</button>
+            </div>
           </div>
-
-          {/* Texture Decor */}
-          <div className="absolute bottom-8 right-8 w-24 h-24 bg-[url('/silk-pattern.png')] opacity-10" />
-        </motion.div>
-
-        {/* Mobile Diagonal Line */}
-        <div className="lg:hidden absolute bottom-0 left-0 right-0 h-12 bg-cream clip-diagonal-mobile" />
+        </div>
       </div>
     </>
   );
